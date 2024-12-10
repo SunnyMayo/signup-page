@@ -9,6 +9,22 @@
     </head>
 
     <body>
+        <script>
+            const images = [
+                'squirrel.jpg',
+                'deskplant.jpg'
+            ];
+
+            let index = 0;
+
+            function changeImage() {
+                const imagebar = document.getElementById('sideimage');
+                imagebar.style.backgroundImage = `url(${images[index]})`;
+                index = (index + 1) % images.length;
+            }
+
+            setInterval(changeImage, 5000);
+        </script>
 
         <div id="sideimage">
             <h2 class="logo-txt">🫶 Grow in Kind</h2>
